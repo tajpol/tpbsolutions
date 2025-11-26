@@ -37,40 +37,52 @@
   
  <form action="https://formspree.io/f/xeowwwkl" method="POST" class="contact-form">
 
-  <div class="form-row">
-    <label for="name">Name</label>
-    <input 
-      type="text" 
-      id="name" 
-      name="name" 
-      placeholder="Your name"
-      required
-    >
+  <!-- SUCCESS / ERROR MESSAGES -->
+  <p class="form-success en">Thank you — your message has been sent.</p>
+  <p class="form-error en">There was an error sending your message. Please try again.</p>
+
+  <p class="form-success jp">送信されました。ありがとうございます。</p>
+  <p class="form-error jp">送信中にエラーが発生しました。もう一度お試しください。</p>
+
+  <!-- ENGLISH VERSION -->
+  <div class="en">
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="email@example.com" required>
+    </div>
+
+    <div class="form-row">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us what you're working on..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Send Message</button>
   </div>
 
-  <div class="form-row">
-    <label for="email">Email</label>
-    <input 
-      type="email" 
-      id="email" 
-      name="email" 
-      placeholder="email@example.com"
-      required
-    >
-  </div>
+  <!-- JAPANESE VERSION -->
+  <div class="jp">
+    <div class="form-row">
+      <label for="name_jp">お名前</label>
+      <input type="text" id="name_jp" name="name" placeholder="お名前" required>
+    </div>
 
-  <div class="form-row">
-    <label for="message">Message</label>
-    <textarea 
-      id="message" 
-      name="message" 
-      rows="6"
-      placeholder="Tell us what you're working on..."
-      required
-    ></textarea>
-  </div>
+    <div class="form-row">
+      <label for="email_jp">メールアドレス</label>
+      <input type="email" id="email_jp" name="email" placeholder="email@example.com" required>
+    </div>
 
-  <button type="submit" class="btn-submit">Send Message</button>
+    <div class="form-row">
+      <label for="message_jp">メッセージ</label>
+      <textarea id="message_jp" name="message" placeholder="ご相談内容をお聞かせください…" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">送信</button>
+  </div>
 
 </form>
 
