@@ -35,11 +35,47 @@
 
   <section class="section-block">
   
-  <form action="https://formspree.io/f/xeowwwkl" method="POST">
-  <input type="email" name="email" placeholder="Your email" required>
-  <textarea name="message" placeholder="Your message"></textarea>
-  <button type="submit">Send</button>
+  <form action="https://formspree.io/f/xeowwwkl" method="POST" class="contact-form">
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Your name"
+      required
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="email@example.com"
+      required
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows="6"
+      placeholder="Tell us what you're working on..."
+      required
+    ></textarea>
+  </div>
+
+  <!-- Optional hidden field helps Formspree detect spam -->
+  <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+  <button type="submit" class="btn-submit">Send Message</button>
 </form>
+
 
   </section>
 
