@@ -34,36 +34,44 @@
   </section>
 
   <section class="section-block">
-    <form class="contact-form">
-      <div class="en">
-        <label>Your Name</label>
-        <input type="text">
-      </div>
-      <div class="jp">
-        <label>お名前</label>
-        <input type="text">
-      </div>
+    <form action="https://formspree.io/f/xeowwwkl" method="POST" class="contact-form">
 
-      <div class="en">
-        <label>Email</label>
-        <input type="email">
-      </div>
-      <div class="jp">
-        <label>メールアドレス</label>
-        <input type="email">
-      </div>
+  <input type="hidden" name="_subject" value="New message from TPB Solutions website">
+  <input type="hidden" name="_language" value="en">
 
-      <div class="en">
-        <label>Message</label>
-        <textarea rows="6"></textarea>
-      </div>
-      <div class="jp">
-        <label>メッセージ</label>
-        <textarea rows="6"></textarea>
-      </div>
+  <!-- NAME -->
+  <div class="en">
+    <label>Your Name</label>
+    <input type="text" name="name">
+  </div>
+  <div class="jp">
+    <label>お名前</label>
+    <input type="text" name="name">
+  </div>
 
-      <button class="btn" type="submit">Send</button>
-    </form>
+  <!-- EMAIL -->
+  <div class="en">
+    <label>Email</label>
+    <input type="email" name="email">
+  </div>
+  <div class="jp">
+    <label>メールアドレス</label>
+    <input type="email" name="email">
+  </div>
+
+  <!-- MESSAGE -->
+  <div class="en">
+    <label>Message</label>
+    <textarea rows="6" name="message"></textarea>
+  </div>
+  <div class="jp">
+    <label>メッセージ</label>
+    <textarea rows="6" name="message"></textarea>
+  </div>
+
+  <button class="btn" type="submit">Send</button>
+</form>
+
   </section>
 
 </main>
