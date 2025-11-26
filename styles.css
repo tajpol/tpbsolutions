@@ -149,3 +149,85 @@ body.jp-mode .en{ display:none; }
   .hero-large{ font-size:4rem; }
   body{ padding:20px; }
 }
+
+/* --- Contact Form Enhancements (Matches site spacing & style) --- */
+
+/* Form wrapper */
+.contact-form {
+  display: grid;
+  gap: 0;                           /* spacing handled by rows */
+  max-width: 600px;
+  margin-top: 40px;                 /* consistent inner spacing */
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Spacing for each row */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 26px;              /* matches .meta-grid and list spacing */
+}
+
+.form-row label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Matching input style */
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* Submit button */
+.btn-submit {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 1rem;
+  transition: opacity .2s ease;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  opacity: .85;
+}
+
+/* Success & Error Messages */
+.form-success,
+.form-error {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 14px;
+  border-radius: 6px;
+  margin-bottom: 26px;
+  display: none;                     /* JS will toggle */
+  font-size: 0.95rem;
+}
+
+.form-success {
+  border-color: #00a000;
+  color: #008000;
+}
+
+.form-error {
+  border-color: #d33;
+  color: #a00;
+}
+
