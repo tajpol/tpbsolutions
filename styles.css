@@ -61,4 +61,96 @@ body{
   color:var(--muted);
   font-size:1.05rem;
   margin-bottom:25px;
-  letter-s
+  letter-spacing:0.8px;
+}
+
+/* Section Separation (Example 2 Style) */
+.section-block{
+  padding:48px 0;
+  border-top:1px solid var(--line);
+  margin-top:48px;
+}
+.section-block:first-of-type{
+  border-top:none;
+  padding-top:0;
+}
+
+/* About / Service Blocks */
+.services-list{
+  list-style:none;
+  padding:0;
+  margin-top:24px;
+}
+.services-list li{
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+}
+.section-title{
+  margin-bottom:10px;
+  font-size:1.3rem;
+  font-weight:600;
+}
+.section-subtitle{
+  font-size:1.05rem;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* Grid layouts */
+.meta-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+  margin-top:24px;
+}
+
+/* Quote */
+.quote{
+  margin-top:24px;
+  border-left:3px solid var(--line);
+  padding-left:14px;
+  font-style:italic;
+  color:var(--muted);
+}
+
+/* Subscribe */
+.subscribe-form{
+  display:flex;
+  gap:10px;
+  margin-top:16px;
+}
+.subscribe-form input{
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  flex:1;
+}
+.subscribe-form button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  padding:10px 14px;
+  border-radius:6px;
+}
+
+/* Footer */
+.site-footer{
+  display:flex;
+  justify-content:space-between;
+  padding-top:32px;
+  margin-top:48px;
+  border-top:1px solid var(--line);
+}
+.site-footer .small{
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media(max-width:720px){
+  .hero-large{font-size:4rem;}
+  .site-header{flex-direction:column; align-items:flex-start;}
+  .topnav a{margin-left:12px;}
+  body{padding:18px;}
+  .card{padding:26px;}
+}
