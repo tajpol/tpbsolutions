@@ -1,0 +1,145 @@
+/* -------------------------------
+   FONT & BASE RESET
+----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #eef3ff; /* soft blue background like Example 2 */
+    color: #111;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+/* -------------------------------
+   HEADER
+----------------------------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------
+   HERO AREA
+-----------------------------------*/
+.hero-title {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.hero-sub {
+    font-size: 2rem;
+    margin-top: -10px;
+}
+
+.hero-desc {
+    max-width: 600px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* --------------------------------
+   INTRO GRID (Two-column Japanese layout)
+-----------------------------------*/
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    max-width: 900px;
+}
+
+/* --------------------------------
+   NAV LINKS
+-----------------------------------*/
+.links {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* --------------------------------
+   NEWS SECTION
+-----------------------------------*/
+.news h2 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.news-item {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.news-item:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.news-item .date {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.news-item a {
+    color: #4e54ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* --------------------------------
+   FOOTER
+-----------------------------------*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding-top: 50px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-col {
+    max-width: 300px;
+}
+
+.footer-label {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.map, .social {
+    color: #4e54ff;
+    text-decoration: none;
+}
+
+.copy {
+    opacity: 0.6;
+    margin-top: 20px;
+}
