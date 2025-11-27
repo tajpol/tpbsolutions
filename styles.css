@@ -1,142 +1,158 @@
 /* --- Typography --- */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700;900&family=Inter:wght@300;400;600;700&display=swap');
 
 :root{
-  --bg: #f2f1ed;
-  --text: #0a0a0a;
-  --muted: #777;
-  --line: #ccc;
-  --accent: #2e3bf7;
+  --bg: #f2f1ed;
+  --text: #0a0a0a;
+  --muted: #777;
+  --line: #ccc;
+  --accent: #2e3bf7;
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  /* NEW: Apply smooth, fast transition for all hover effects */
+  transition: all 0.2s ease-in-out; 
 }
 
 body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:"Inter","Noto Sans JP",sans-serif;
-  padding:40px 28px 80px 28px;
-  line-height:1.55;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Inter","Noto Sans JP",sans-serif;
+  /* UPDATED: Increased vertical padding and used viewport units for horizontal (Negative Space) */
+  padding:60px 4vw 80px 4vw;
+  /* UPDATED: Increased line-height for more "air" */
+  line-height:1.7; 
 }
 
 /* HEADER */
 .site-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  /* UPDATED: Increase margin-bottom for more space below header */
+  margin-bottom:80px; 
+  /* NEW: Add padding and a subtle bottom border for a clean separator */
+  padding-bottom:20px; 
+  border-bottom:1px solid var(--line);
 }
 .brand{
-  font-size:1rem;
-  font-weight:800;
-  letter-spacing:1px;
+  font-size:1rem;
+  font-weight:800;
+  letter-spacing:1px;
 }
 .topnav a{
-  margin-left:24px;
-  text-decoration:none;
-  color:var(--text);
+  /* UPDATED: Increase spacing between links */
+  margin-left:32px; 
+  text-decoration:none;
+  color:var(--text);
+  /* NEW: Required for underline hover effect */
+  position:relative; 
 }
 
 /* LANGUAGE TOGGLE */
 .lang-toggle{
-  margin-left:24px;
-  cursor:pointer;
-  padding:4px 10px;
-  border:1px solid var(--line);
-  border-radius:6px;
-  font-size:0.9rem;
+  margin-left:24px;
+  cursor:pointer;
+  padding:4px 10px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  font-size:0.9rem;
 }
 .lang-active{
-  background:var(--accent);
-  color:white;
-  border-color:var(--accent);
+  background:var(--accent);
+  color:white;
+  border-color:var(--accent);
 }
 
 /* HEADINGS */
 .hero-large{
-  font-size:6rem;
-  font-weight:900;
-  line-height:0.9;
-  letter-spacing:-3px;
-  margin-bottom:16px;
+  font-size:6rem;
+  font-weight:900;
+  /* UPDATED: Slightly increase line-height and letter-spacing for readability */
+  line-height:1.0; 
+  letter-spacing:-1px; 
+  margin-bottom:16px;
 }
 .section-block{
-  margin-top:60px;
-  padding-top:50px;
-  border-top:1px solid var(--line);
+  /* UPDATED: Increased vertical space between sections */
+  margin-top:80px; 
+  padding-top:60px;
+  border-top:1px solid var(--line);
 }
 .section-title{
-  font-size:1.4rem;
-  margin-bottom:10px;
+  font-size:1.4rem;
+  /* UPDATED: Slightly increase margin and add weight */
+  margin-bottom:14px; 
+  font-weight:600;
 }
 .jp-sub{
-  font-size:1rem;
-  color:var(--muted);
-  margin-bottom:18px;
+  font-size:1rem;
+  color:var(--muted);
+  margin-bottom:18px;
 }
 
 /* TEXT */
 .lead{
-  max-width:760px;
-  color:var(--muted);
-  margin-bottom:10px;
+  max-width:760px;
+  color:var(--muted);
+  /* UPDATED: Increased margin for more separation */
+  margin-bottom:20px; 
 }
 
 /* LISTS */
 .services-list{
-  list-style:none;
-  margin-top:24px;
+  list-style:none;
+  margin-top:24px;
 }
 .services-list li{
-  padding:14px 0;
-  border-bottom:1px solid var(--line);
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
 }
 
 /* GRID */
 .meta-grid{
-  margin-top:26px;
-  display:grid;
-  gap:26px;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  margin-top:26px;
+  display:grid;
+  gap:26px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 }
 
 /* FORMS */
 .contact-form{
-  display:grid;
-  gap:16px;
-  max-width:600px;
+  display:grid;
+  gap:16px;
+  max-width:600px;
 }
 .contact-form input,
 .contact-form textarea{
-  padding:12px;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:6px;
+  padding:12px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:6px;
 }
 .btn{
-  background:var(--accent);
-  color:white;
-  border:none;
-  padding:12px;
-  border-radius:6px;
-  cursor:pointer;
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:6px;
+  cursor:pointer;
 }
 
 /* FOOTER */
 .site-footer{
-  margin-top:60px;
-  padding-top:30px;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
+  margin-top:60px;
+  padding-top:30px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
 }
 .site-footer .small{
-  font-size:0.85rem;
-  color:var(--muted);
+  font-size:0.85rem;
+  color:var(--muted);
 }
 
 /* LANGUAGE VISIBILITY */
@@ -144,88 +160,124 @@ body{
 body.jp-mode .jp{ display:block; }
 body.jp-mode .en{ display:none; }
 
+/* --- MINIMALIST HOVER EFFECTS (NEW BLOCK) --- */
+
+/* Navigation Underline Fade */
+.topnav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px; /* Very thin line */
+    bottom: -6px; /* Position slightly below the text */
+    left: 0;
+    background-color: var(--text); /* Matches text color */
+    transform: scaleX(0); /* Start hidden */
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+}
+
+.topnav a:hover::after {
+    transform: scaleX(1); /* Reveal on hover */
+    transform-origin: bottom left;
+}
+
+/* Button & Language Toggle Hover (Subtle Lift/Shadow) */
+.btn:hover,
+.lang-toggle:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Very light shadow */
+    transform: translateY(-1px); /* Subtle lift */
+}
+
+/* List Item Hover (Visual feedback on interactive list) */
+.services-list li:hover {
+    background: rgba(0, 0, 0, 0.02); /* Very light background change */
+    cursor: pointer;
+}
+
 /* RESPONSIVE */
 @media(max-width:720px){
-  .hero-large{ font-size:4rem; }
-  body{ padding:20px; }
+  .hero-large{ font-size:4rem; }
+  /* Ensure mobile padding is also generous */
+  body{ padding:30px 20px; } 
 }
 
 /* --- CONTACT FORM FINAL FIX (TP Business Solutions aesthetic) --- */
 
 /* Restrict form width to match natural reading width */
 .contact-form {
-  max-width: 540px;
-  margin-top: 40px;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 40px;
+  max-width: 540px;
+  margin-top: 40px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 40px;
 }
 
 /* Each row spaced cleanly – not too large, not too cramped */
 .form-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
 /* Labels: small, clean, left-aligned */
 .form-row label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
 }
 
 /* Inputs: match your minimalist boxes */
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
-  border-radius: 4px;
-  border: 1px solid var(--line);
-  background: #fff;
-  font-size: 0.95rem;
-  width: 100%;         /* keep inside column width */
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-size: 0.95rem;
+  width: 100%;         /* keep inside column width */
 }
 
 /* Reduce textarea height so it’s not giant */
 .contact-form textarea {
-  min-height: 120px;
+  min-height: 120px;
 }
 
 /* Submit button: match your other buttons */
 .btn-submit {
-  background: var(--accent);
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.95rem;
-  width: fit-content;
-  margin-top: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  width: fit-content;
+  margin-top: 10px;
 }
 
 .btn-submit:hover {
-  opacity: 0.85;
+  opacity: 0.85;
 }
 
 /* SUCCESS / ERROR MESSAGES: subtle and well-aligned */
 .form-success,
 .form-error {
-  display: none;
-  padding: 12px 14px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  background: white;
-  border: 1px solid var(--line);
+  display: none;
+  padding: 12px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  background: white;
+  border: 1px solid var(--line);
 }
 
 .form-success {
-  border-color: #2e8b57;
-  color: #2e8b57;
+  border-color: #2e8b57;
+  color: #2e8b57;
 }
 
 .form-error {
-  border-color: #b33;
-  color: #a00;
+  border-color: #b33;
+  color: #a00;
 }
