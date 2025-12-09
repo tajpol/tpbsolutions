@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
   
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".contact-form");
   const success = document.querySelectorAll(".form-success");
@@ -70,53 +70,120 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <section class="section-block">
   
- <form action="https://formspree.io/f/xeowwwkl" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/xeowwwkl" method="POST" class="contact-form">
 
-  <!-- ENGLISH VERSION -->
-  <div class="en">
-    <div class="form-row">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <!-- ENGLISH VERSION -->
+      <div class="en">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you're working on..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </div>
+
+      <!-- JAPANESE VERSION -->
+      <div class="jp">
+        <div class="form-row">
+          <label for="name_jp">お名前</label>
+          <input type="text" id="name_jp" name="name" placeholder="お名前" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email_jp">メールアドレス</label>
+          <input type="email" id="email_jp" name="email" placeholder="email@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message_jp">メッセージ</label>
+          <textarea id="message_jp" name="message" placeholder="ご相談内容をお聞かせください…" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">送信</button>
+      </div>
+
+    </form>
+
+  </section>
+
+  <!-- NEW BOOKING SECTION BELOW (uses same spacing class) -->
+  <section class="section-block">
+    <div class="en">
+      <h2>Book Me for a 1:1 or Small Group Strategy Session</h2>
+
+      <!-- 1:1 -->
+      <p>
+        <a href="https://calendar.app.google/ZvvrUbakMWCkJHJq7" target="_blank" rel="noopener noreferrer">
+          Book a 1:1 Session
+        </a>
+      </p>
+
+      <p>
+        <a href="https://book.stripe.com/dRm7sLfOB4ZnaHQ4Xs9sk04" target="_blank" rel="noopener noreferrer">
+          Already booked your 1:1? Pay here.
+        </a>
+      </p>
+
+      <!-- Group -->
+      <p style="margin-top: 1.5em;">
+        <a href="https://calendar.app.google/ZvvrUbakMWCkJHJq7" target="_blank" rel="noopener noreferrer">
+          Book a Small Group Session
+        </a>
+      </p>
+
+      <p>
+        <a href="https://book.stripe.com/14A4gz45T3Vj4js2Pk9sk05" target="_blank" rel="noopener noreferrer">
+          Already booked your group sesh? Pay here.
+        </a>
+      </p>
+
+      <p style="margin-top: 2em; font-style: italic;">
+        Discounted rates available if you book a package of 6 or 10 sessions — redeemable within one calendar year of payment.
+      </p>
     </div>
 
-    <div class="form-row">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="email@example.com" required>
+    <!-- JP MODE (minimal translation, optional) -->
+    <div class="jp">
+      <h2>1対1 または少人数向け戦略セッションのご予約</h2>
+
+      <p>
+        <a href="https://calendar.app.google/ZvvrUbakMWCkJHJq7" target="_blank" rel="noopener noreferrer">
+          1対1セッションを予約
+        </a>
+      </p>
+
+      <p>
+        <a href="https://book.stripe.com/dRm7sLfOB4ZnaHQ4Xs9sk04" target="_blank" rel="noopener noreferrer">
+          1対1を予約済みの方はこちらからお支払い
+        </a>
+      </p>
+
+      <p style="margin-top: 1.5em;">
+        <a href="https://calendar.app.google/ZvvrUbakMWCkJHJq7" target="_blank" rel="noopener noreferrer">
+          グループセッションを予約
+        </a>
+      </p>
+
+      <p>
+        <a href="https://book.stripe.com/14A4gz45T3Vj4js2Pk9sk05" target="_blank" rel="noopener noreferrer">
+          グループ予約済みの方はこちらからお支払い
+        </a>
+      </p>
+
+      <p style="margin-top: 2em; font-style: italic;">
+        6回または10回のパッケージを購入すると割引が適用されます。購入日から1年以内にご利用いただけます。
+      </p>
     </div>
-
-    <div class="form-row">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Tell us what you're working on..." required></textarea>
-    </div>
-
-    <button type="submit" class="btn-submit">Send Message</button>
-  </div>
-
-  <!-- JAPANESE VERSION -->
-  <div class="jp">
-    <div class="form-row">
-      <label for="name_jp">お名前</label>
-      <input type="text" id="name_jp" name="name" placeholder="お名前" required>
-    </div>
-
-    <div class="form-row">
-      <label for="email_jp">メールアドレス</label>
-      <input type="email" id="email_jp" name="email" placeholder="email@example.com" required>
-    </div>
-
-    <div class="form-row">
-      <label for="message_jp">メッセージ</label>
-      <textarea id="message_jp" name="message" placeholder="ご相談内容をお聞かせください…" required></textarea>
-    </div>
-
-    <button type="submit" class="btn-submit">送信</button>
-  </div>
-
-</form>
-
-
-
-
   </section>
 
 </main>
